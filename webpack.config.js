@@ -5,12 +5,14 @@ module.exports = {
   devtool: 'eval',
   progress: true,
 
-	entry: 'XXXXXXX',
+	entry: [
+		'./client/scripts/main.js'
+	],
 
 	output: {
 		path: path.join(__dirname),
 		publicPath: '/build/',
-    filename: 'XXXXXXX',
+    filename: 'bundle.js',
 	},
 
 	module: {
