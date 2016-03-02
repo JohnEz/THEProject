@@ -1,0 +1,25 @@
+{
+  "name": "grad-project-shell",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha test",
+    "start": "node server",
+    "postinstall": "gulp compile"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongodb": "^2.1.7",
+    "gulp-live-server": "0.0.29",
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^1.5.2",
+    "gulp-util": "^3.0.7",
+    "webpack": "^1.12.13",
+    "webpack-stream": "^3.1.0",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}

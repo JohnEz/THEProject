@@ -1,0 +1,13 @@
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: XXXXXXXXXXXXX
+
+dependencies:
+  override:
+    - npm install --ignore-scripts
+
+machine:
+  node:
+    version: 5.7.0
