@@ -1,0 +1,11 @@
+<div class="register">
+  <form data-bind="submit: register">
+    <label>Name<input required data-bind="value: realName" placeholder="Name" /></label><br />
+    <label>Email<input required data-bind="value: email" type="email" placeholder="email" /></label><br />
+    <label>Username<input required data-bind="value: username" placeholder="Username" /></label> <br />
+    <label>Password<input required data-bind="value: password1" type="password" placeholder="password" /></label> <br />
+    <label>Password<input required data-bind="value: password2" type="password" placeholder="password check" /></label> <br />
+    <div data-bind="visible: passwordMismatch">Passwords do not match</div>
+    <button type="submit">Register</button>
+  </form>
+</div>
