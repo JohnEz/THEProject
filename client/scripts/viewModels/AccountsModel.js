@@ -1,12 +1,11 @@
-define(['knockout'], function (ko) {
-    'use strict';
+import ko from 'knockout';
 
-  function AccountsModel() {
-    this.tabs = ['Login', 'Register'];
+'use strict';
+
+function AccountsModel() {
+  this.tabs = ['Login', 'Register'];
 
 
-  };
+};
 
-  return AccountsModel;
-
-});
+exports.viewModel = AccountsModel;

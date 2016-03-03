@@ -1,14 +1,9 @@
-define([
-    'knockout',
-    'jquery',
-    'viewModels/MainViewModel',
+import ko from 'knockout';
+//import $ from 'jquery';
+import ViewModel from './viewModels/MainViewModel';
 
-], function (ko, $, ViewModel) {
-    'use strict';
+'use strict';
 
-    var viewModel = new ViewModel();
+var viewModel = new ViewModel();
 
-    ko.applyBindings(viewModel, document.body);
-
-
-});
+ko.applyBindings(viewModel, document.body);

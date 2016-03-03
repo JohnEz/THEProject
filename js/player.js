@@ -28,6 +28,9 @@ Player.prototype.create = function() {
   //  We need to enable physics on the player
   this.game.physics.arcade.enable(this.sprite);
   this.sprite.body.collideWorldBounds = true;
+
+  //this.sprite.scale.setTo(2,2);
+
   this.sprite.anchor.setTo(0.25, 0.5);
 
   //bullets

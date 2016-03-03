@@ -1,36 +1,35 @@
-define(['knockout'], function (ko) {
-    'use strict';
+import ko from 'knockout';
 
-  function RegisterModel() {
-    this.realName = ko.observable();
-    this.email = ko.observable();
-    this.username = ko.observable();
-    this.password1 = ko.observable();
-    this.password2 = ko.observable();
+'use strict';
 
-    this.passwordMismatch = ko.computed(function(){
-      if((this.password1() && this.password1().length > 0) &&
-        (this.password2() && this.password2().length > 0) &&
-        !(this.password1() === this.password2())) {
-          return true;
-        }
-        else {
-          return false;
-        }
-    }, this);
+function RegisterModel() {
+  this.realName = ko.observable();
+  this.email = ko.observable();
+  this.username = ko.observable();
+  this.password1 = ko.observable();
+  this.password2 = ko.observable();
 
-    this.register = function(){
-      console.log("Register "+ this.realName() + " with username " + this.username());
-      console.log("and email "+ this.email());
-      console.log("password "+ this.password1());
-      this.realName("");
-      this.email("");
-      this.username("");
-      this.password1("");
-      this.password2("");
-    }
-  };
+  this.passwordMismatch = ko.computed(function(){
+    if((this.password1() && this.password1().length > 0) &&
+      (this.password2() && this.password2().length > 0) &&
+      !(this.password1() === this.password2())) {
+        return true;
+      }
+      else {
+        return false;
+      }
+  }, this);
 
-  return RegisterModel;
+  this.register = function(){
+    console.log("Register "+ this.realName() + " with username " + this.username());
+    console.log("and email "+ this.email());
+    console.log("password "+ this.password1());
+    this.realName("");
+    this.email("");
+    this.username("");
+    this.password1("");
+    this.password2("");
+  }
+};
 
-});
+exports.viewModel = RegisterModel;

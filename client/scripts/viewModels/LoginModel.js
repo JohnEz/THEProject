@@ -1,17 +1,16 @@
-define(['knockout'], function (ko) {
-    'use strict';
+import ko from 'knockout';
 
-  function LoginModel() {
-    this.username = ko.observable();
-    this.password = ko.observable();
+'use strict';
 
-    this.login = function() {
-      console.log("login to "+ this.username() + " with " + this.password());
-      this.username("");
-      this.password("");
-    }
-  };
+function LoginModel() {
+  this.username = ko.observable();
+  this.password = ko.observable();
 
-  return LoginModel;
+  this.login = function() {
+    console.log("login to "+ this.username() + " with " + this.password());
+    this.username("");
+    this.password("");
+  }
+};
 
-});
+exports.viewModel = LoginModel;

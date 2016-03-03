@@ -1,29 +1,31 @@
-define([
-    'knockout',
-    'jquery',
-    'viewModels/AccountsModel',
-    'viewModels/RegisterModel',
-    'viewModels/LoginModel',
-], function (ko, $, AccountsModel, RegisterModel, LoginModel) {
-    'use strict';
+import ko from 'knockout';
+//import $ from 'jquery';
+import AccountsModel from './AccountsModel';
+import RegisterModel from './RegisterModel';
+import LoginModel from './LoginModel';
+var accountsTemplate = require('../templates/accounts.html');
+var registerTemplate = require('../templates/register.html');
+var loginTemplate = require('../templates/login.html');
 
-    var ViewModel = function ViewModel() {
+'use strict';
 
-        ko.components.register('login-tile', {
-          viewModel: {require: 'viewModels/LoginModel'},
-          template: {require: 'text!templates/login.html'}
-        });
+var ViewModel = function ViewModel() {
 
-        ko.components.register('register-tile', {
-          viewModel: {require: 'viewModels/RegisterModel'},
-          template: {require: 'text!templates/register.html'}
-        });
+  ko.components.register('account-control', {
+    viewModel: AccountsModel,
+    template: accountsTemplate
+  });
 
-        ko.components.register('account-control', {
-          viewModel: {require: 'viewModels/AccountsModel'},
-          template: {require: 'text!templates/accounts.html'}
-        });
+  ko.components.register('register-tile', {
+    viewModel: RegisterModel,
+    template: registerTemplate
+  });
 
-      }
-    return ViewModel;
-});
+  ko.components.register('login-tile', {
+    viewModel: LoginModel,
+    template: loginTemplate
+  });
+
+}
+
+export default ViewModel;
