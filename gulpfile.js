@@ -14,7 +14,7 @@ const serverPort = 8000;
 
 const paths = {
    HTML: 'index.html',
-   JS: ['src/**/*.js'],
+   JS: ['client/**/*.js'],
    BUILD: 'build',
    SERVER: 'server.js'
  };
