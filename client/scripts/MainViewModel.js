@@ -1,11 +1,11 @@
 import ko from 'knockout';
 //import $ from 'jquery';
-import AccountsModel from './AccountsModel';
-import RegisterModel from './RegisterModel';
-import LoginModel from './LoginModel';
-var accountsTemplate = require('../templates/accounts.html');
-var registerTemplate = require('../templates/register.html');
-var loginTemplate = require('../templates/login.html');
+import AccountsModel from '../components/accounts/viewModel';
+import RegisterModel from '../components/register/viewModel';
+import LoginModel from '../components/login/viewModel';
+var accountsTemplate = require('../components/accounts/template.html');
+var registerTemplate = require('../components/register/template.html');
+var loginTemplate = require('../components/login/template.html');
 
 'use strict';
 

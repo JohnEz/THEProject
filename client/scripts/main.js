@@ -1,6 +1,6 @@
 import ko from 'knockout';
 //import $ from 'jquery';
-import ViewModel from './viewModels/MainViewModel';
+import ViewModel from './MainViewModel';
 
 'use strict';
 
